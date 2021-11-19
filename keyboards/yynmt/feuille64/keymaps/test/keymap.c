@@ -137,13 +137,13 @@ bool process_record_user(uint16_t keycode, keyrecord_t *record) {
                 return false;
 
             case RE1:
-                SEND_STRING("Rotary Eoncder 1\n");
+                SEND_STRING("Rotary Encoder 1\n");
                 return false;
             case RE2:
-                SEND_STRING("Rotary Eoncder 2\n");
+                SEND_STRING("Rotary Encoder 2\n");
                 return false;
             case RE3:
-                SEND_STRING("Rotary Eoncder 3\n");
+                SEND_STRING("Rotary Encoder 3\n");
                 return false;
 
             case MX11:
