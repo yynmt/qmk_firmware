@@ -330,7 +330,7 @@ const rgblight_segment_t PROGMEM rgb_chroma4th_layer[] = RGBLIGHT_LAYER_SEGMENTS
 
     /* row 2 8-15 */
     {9, 1, HSV_GRAY},
-    {10, 1, HSV_GRAY},
+    {11, 1, HSV_GRAY},
     {13, 1, HSV_GRAY},
     {14, 1, HSV_RED},
 

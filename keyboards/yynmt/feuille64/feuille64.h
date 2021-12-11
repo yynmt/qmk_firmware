@@ -20,4 +20,8 @@
 #    include "rev1.h"
 #endif
 
+#ifdef KEYBOARD_yynmt_feuille64_rev2
+#    include "rev2.h"
+#endif
+
 #include "quantum.h"

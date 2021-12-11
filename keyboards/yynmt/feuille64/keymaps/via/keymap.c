@@ -18,6 +18,7 @@
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
   [0] = LAYOUT(
+                    KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
       KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,
 
       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -30,6 +31,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
       KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
   ),
   [1] = LAYOUT(
+                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,
 
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -42,6 +44,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
   ),
   [2] = LAYOUT(
+                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,
 
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -54,6 +57,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
   ),
   [3] = LAYOUT(
+                  KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
     KC_NO, KC_NO, KC_NO, KC_NO,        KC_NO, KC_NO, KC_NO,
 
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
@@ -66,3 +70,71 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
   )
 };
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    keypos_t key;
+    keyrecord_t record;
+
+    if (index == 0) { /* First encoder */
+        if (clockwise) {
+          key.row = 9;
+          key.col = 0;
+        } else {
+          key.row = 9;
+          key.col = 1;
+        }
+        uint8_t  layer   = layer_switch_get_layer(key);
+        uint16_t keycode = keymap_key_to_keycode(layer, key);
+        record.event.key = key;
+        if (keycode < MI_ON){
+          tap_code16(keycode);
+        } else {
+          record.event.pressed = true;
+          process_midi(keycode, &record);
+          wait_ms(TAP_CODE_DELAY);
+          record.event.pressed = false;
+          process_midi(keycode, &record);
+        }
+    } else if (index == 1) { /* Second encoder */
+        if (clockwise) {
+          key.row = 9;
+          key.col = 2;
+        } else {
+          key.row = 9;
+          key.col = 3;
+        }
+        uint8_t  layer   = layer_switch_get_layer(key);
+        uint16_t keycode = keymap_key_to_keycode(layer, key);
+        record.event.key = key;
+        if (keycode < MI_ON){
+          tap_code16(keycode);
+        } else {
+          record.event.pressed = true;
+          process_midi(keycode, &record);
+          wait_ms(TAP_CODE_DELAY);
+          record.event.pressed = false;
+          process_midi(keycode, &record);
+        }
+    } else if (index == 2) { /* Third encoder */
+        if (clockwise) {
+          key.row = 9;
+          key.col = 4;
+        } else {
+          key.row = 9;
+          key.col = 5;
+        }
+        uint8_t  layer   = layer_switch_get_layer(key);
+        uint16_t keycode = keymap_key_to_keycode(layer, key);
+        record.event.key = key;
+        if (keycode < MI_ON){
+          tap_code16(keycode);
+        } else {
+          record.event.pressed = true;
+          process_midi(keycode, &record);
+          wait_ms(TAP_CODE_DELAY);
+          record.event.pressed = false;
+          process_midi(keycode, &record);
+        }
+    }
+    return true;
+}
