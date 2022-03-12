@@ -35,11 +35,18 @@
 /* COL2ROW, ROW2COL */
 #define DIODE_DIRECTION COL2ROW
 
+/* Audio */
 #define AUDIO_PIN C5
 #define AUDIO_CLICKY
 
-#define ENCODERS_PAD_A { C2 }
-#define ENCODERS_PAD_B { D0 }
+/* Encoder */
+#define ENCODERS 1
+
+#define ENCODERS_PAD_A { D0 }
+#define ENCODERS_PAD_B { C2 }
+
+#define ENCODERS_CW_KEY  { { 4, 3 } }
+#define ENCODERS_CCW_KEY { { 5, 3 } }
 
 /*
  * Split Keyboard specific options, make sure you have 'SPLIT_KEYBOARD = yes' in your rules.mk, and define SOFT_SERIAL_PIN.

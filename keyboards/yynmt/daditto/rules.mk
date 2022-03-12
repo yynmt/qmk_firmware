@@ -21,4 +21,7 @@ RGBLIGHT_ENABLE = no        # Enable keyboard RGB underglow
 AUDIO_ENABLE = yes           # Audio output
 ENCODER_ENABLE = yes
 
+# Added encoder Action
+SRC += encoder_action.c
+
 LDFLAGS+=-Wl,--cref,--defsym=__DATA_REGION_LENGTH__=1024
