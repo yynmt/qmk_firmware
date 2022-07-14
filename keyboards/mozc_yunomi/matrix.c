@@ -91,11 +91,11 @@ uint8_t matrix_cols(void) {
 }
 
 //Deprecated.
-bool matrix_is_modified(void)
-{
-    if (debounce_active()) return false;
-    return true;
-}
+// bool matrix_is_modified(void)
+// {
+//     if (debounce_active()) return false;
+//     return true;
+// }
 
 inline
 bool matrix_is_on(uint8_t row, uint8_t col)
