@@ -22,3 +22,5 @@ AUDIO_ENABLE = yes           # Audio output
 CUSTOM_MATRIX = yes
 
 SRC += matrix.c
+
+LTO_ENABLE = yes
