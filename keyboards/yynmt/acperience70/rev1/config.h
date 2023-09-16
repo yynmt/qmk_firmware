@@ -16,30 +16,5 @@
 
 #pragma once
 
-/* USB Device descriptor parameter */
-#define VENDOR_ID       0x04D8
-#define PRODUCT_ID      0xEA50
-#define DEVICE_VER      0x0001
-#define MANUFACTURER    yynmt
-#define PRODUCT         Acperience70
-#define DESCRIPTION     split keyboard
-
-/* key matrix size */
-// Rows are doubled-up
-#define MATRIX_ROWS 10
-#define MATRIX_COLS 9
-
-#define DIODE_DIRECTION COL2ROW
-// wiring of each half
-#define MATRIX_ROW_PINS { F0, F1, F4, F5, F6 }
-#define MATRIX_COL_PINS { F7, C7, C6, B6, B5, B4, D7, D6, D4 }
-
 #define SPLIT_HAND_PIN B7
-
-/* Set 0 if debouncing isn't needed */
-#define DEBOUNCE 50
-
-/* serial.c configuration for split keyboard */
-#define SOFT_SERIAL_PIN D2
-
 #define GRAVE_ESC_CTRL_OVERRIDE
