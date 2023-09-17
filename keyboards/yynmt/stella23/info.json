@@ -1,9 +1,18 @@
 {
     "keyboard_name": "Stella23",
     "maintainer": "yynmt",
+    "url": "http://yynmt.com",
     "manufacturer": "yynmt",
+
+    "processor": "atmega32u2",
     "bootloader": "atmel-dfu",
-    "diode_direction": "COL2ROW",
+
+    "usb": {
+        "device_version": "1.0.0",
+        "vid": "0x04D8",
+        "pid": "0xE64F"
+    },
+
     "features": {
         "bootmagic": true,
         "command": false,
@@ -12,17 +21,13 @@
         "mousekey": true,
         "nkro": true
     },
+
+    "diode_direction": "COL2ROW",
     "matrix_pins": {
         "cols": ["B3", "D5", "D6", "B0", "B1", "B2"],
         "rows": ["D1", "D2", "D3", "D4"]
     },
-    "processor": "atmega32u2",
-    "url": "http://yynmt.com",
-    "usb": {
-        "device_version": "1.0.0",
-        "vid": "0x04D8",
-        "pid": "0xE64F"
-    },
+
     "layouts": {
         "LAYOUT": {
             "layout": [
