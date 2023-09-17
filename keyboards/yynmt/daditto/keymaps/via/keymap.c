@@ -52,3 +52,33 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO
     )
 };
+
+bool encoder_update_user(uint8_t index, bool clockwise) {
+    if (index == 0) {
+        keypos_t key;
+        if (clockwise) {
+            key.row = 3;
+            key.col = 5;
+        } else {
+            key.row = 3;
+            key.col = 4;
+        }
+        uint8_t  layer   = layer_switch_get_layer(key);
+        uint16_t keycode = keymap_key_to_keycode(layer, key);
+        tap_code16(keycode);
+    }
+    return false;
+}
+
+#ifdef AUDIO_ENABLE
+void startup_user()
+{
+    _delay_ms(50); // gets rid of tick
+}
+
+void shutdown_user()
+{
+    _delay_ms(150);
+    stop_all_notes();
+}
+#endif
