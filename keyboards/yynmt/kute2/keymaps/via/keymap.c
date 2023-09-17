@@ -25,7 +25,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
     [0] = LAYOUT(
         RGB_HUD, RGB_SAD, RGB_VAD,   RGB_HUI, RGB_SAI, RGB_VAI,
-                                USER00
+                                QK_KB_0
     ),
     [1] = LAYOUT(
         KC_NO, KC_NO, KC_NO,   KC_NO, KC_NO, KC_NO,
@@ -75,14 +75,14 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
     switch (keycode) {
-        case USER00:
+        case QK_KB_0:
             if (record->event.pressed) {
             #ifdef AUDIO_ENABLE
                 PLAY_SONG(coin);
             #endif
             }
             break;
-        case USER01:
+        case QK_KB_1:
             if (record->event.pressed) {
                 rgblight_toggle();
                 #ifdef AUDIO_ENABLE
