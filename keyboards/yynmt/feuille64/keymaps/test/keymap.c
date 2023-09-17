@@ -107,6 +107,7 @@ enum custom_keycodes {
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     /* Base */
     [TEST] = LAYOUT(
+        KC_NO, KC_NO, KC_NO, KC_NO, KC_NO, KC_NO,
         TS1, TS2, TS3, TS4, RE1, RE2, RE3,
 
         MX11, MX12, MX13, MX14, MX15, MX16, MX17, MX18,
@@ -370,7 +371,7 @@ bool encoder_update_user(uint8_t index, bool clockwise) {
             SEND_STRING("Encoder 3 right\n");
         }
     }
-    return true;
+    return false;
 }
 
 void keyboard_post_init_user(void) {

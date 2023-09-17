@@ -82,6 +82,7 @@ static uint8_t ch3_layer = _DRUM;
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [_CHROMA4TH] = LAYOUT(
+                          XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
         CH1,     CH2,     CH3,     TO(_CONFIG),      _______, _______, RGB_TOG,
 
         MI_B_4,  MI_C_5,  MI_Cs_5, MI_D_5,  MI_Ds_5, MI_E_5,  MI_F_5,  MI_Fs_5,
@@ -94,6 +95,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_2,  MI_Cs_2, MI_D_2,  MI_Ds_2, MI_E_2,  MI_F_2,  MI_Fs_2, MI_G_2
     ),
     [_INKEY4TH] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         MI_C_5,  MI_D_5,  MI_E_5,  MI_F_5,  MI_G_5,  MI_A_5,  MI_B_5,  XXXXXXX,
@@ -106,6 +108,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_2,  MI_D_2,  MI_E_2,  MI_F_2,  MI_G_2,  MI_A_2,  MI_B_2,  MI_C_3
     ),
     [_CHROMA3RD] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         MI_E_4,  MI_F_4,  MI_Fs_4, MI_G_4,  MI_Gs_4, MI_A_4,  MI_As_4, MI_B_4,
@@ -118,6 +121,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_2,  MI_Cs_2, MI_D_2,  MI_Ds_2, MI_E_2,  MI_F_2,  MI_Fs_2, MI_G_2
     ),
     [_INKEY3RD] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         MI_E_4,  MI_F_4,  MI_G_4,  MI_A_4,  MI_B_4,  MI_C_5,  MI_D_5,  MI_E_5,
@@ -130,6 +134,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_2,  MI_D_2,  MI_E_2,  MI_F_2,  MI_G_2,  MI_A_2,  MI_B_2,  MI_C_3
     ),
     [_SEQUENT] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         // MI_Gs_6, MI_A_6,  MI_As_6, MI_B_6,  MI_C_7,  MI_Cs_7, MI_D_7,  MI_Ds_7,
@@ -144,6 +149,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_2,  MI_Cs_2, MI_D_2,  MI_Ds_2, MI_E_2,  MI_F_2,  MI_Fs_2, MI_G_2
     ),
     [_PIANO] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         XXXXXXX, MI_Cs_4, MI_Ds_4, XXXXXXX, MI_Fs_4, MI_Gs_4, MI_As_4, XXXXXXX,
@@ -156,6 +162,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_1,  MI_D_1,  MI_E_1,  MI_F_1,  MI_G_1,  MI_A_1,  MI_B_1,  MI_C_2
     ),
     [_DRUM] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         MI_E_3,  MI_F_3,  MI_Fs_3, MI_G_3,  XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -168,6 +175,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         MI_C_1,  MI_Cs_1, MI_D_1,  MI_Ds_1, MI_Gs_3, MI_A_3,  MI_As_3, MI_B_3
     ),
     [_BLANK] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX,
@@ -180,6 +188,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
         XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX, XXXXXXX
     ),
     [_CONFIG] = LAYOUT(
+                          _______, _______, _______, _______, _______, _______,
         _______, _______, _______, _______,          _______, _______, _______,
 
         CH1_L1,  CH2_L1,  CH3_L1,  XXXXXXX, RGB_MOD, RGB_HUI, RGB_SAI, RGB_VAI,
