@@ -1,0 +1,13 @@
+{
+  "name": "Cochlea",
+  "vendorId": "0x04D8",
+  "productId": "0xE5F7",
+  "lighting": "none",
+  "matrix": { "rows": 1, "cols": 3 },
+  "layouts": {
+    "keymap": [
+      ["0,1","0,2"],
+      [{"x":0.5},"0,0"]
+    ]
+  }
+}
