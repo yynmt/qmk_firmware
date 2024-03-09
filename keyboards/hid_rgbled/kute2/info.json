@@ -1,0 +1,18 @@
+{
+    "keyboard_name": "Kute2",
+    "bootloader": "rp2040",
+    "processor": "RP2040",
+    "matrix_pins":{
+        "direct": [
+            ["GP18", "GP19", "GP20", "GP6", "GP3", "GP4", "GP5"]
+        ]
+    },
+    "ws2812": {
+        "pin": "GP17",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 18,
+        "max_brightness": 247
+    }
+}
