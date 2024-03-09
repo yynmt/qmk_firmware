@@ -1,0 +1,17 @@
+{
+    "keyboard_name": "feuille64",
+    "bootloader": "atmel-dfu",
+    "processor": "atmega32u4",
+    "matrix_pins":{
+        "rows":["D0"],
+        "cols":["F1"]
+    },
+    "diode_direction": "COL2ROW",
+    "ws2812": {
+        "pin": "F0"
+    },
+    "rgblight": {
+        "led_count": 64,
+        "max_brightness": 120
+    }
+}

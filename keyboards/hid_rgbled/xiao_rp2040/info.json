@@ -1,0 +1,16 @@
+{
+    "keyboard_name": "xiao_rp2040",
+    "bootloader": "rp2040",
+    "processor": "RP2040",
+    "matrix_pins":{
+        "direct": [["GP26"]]
+    },
+    "ws2812": {
+        "pin": "GP12",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 1,
+        "max_brightness": 200
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "keyboard_name": "rp2040_zero",
+    "bootloader": "rp2040",
+    "processor": "RP2040",
+    "matrix_pins":{
+        "direct": [["GP0"]]
+    },
+    "ws2812": {
+        "pin": "GP16",
+        "driver": "vendor"
+    },
+    "rgblight": {
+        "led_count": 1,
+        "max_brightness": 255
+    }
+}

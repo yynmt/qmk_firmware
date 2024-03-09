@@ -1,0 +1,15 @@
+{
+    "keyboard_name": "ichi",
+    "bootloader": "atmel-dfu",
+    "processor": "atmega32u4",
+    "matrix_pins":{
+        "direct": [["B5"]]
+    },
+    "ws2812": {
+        "pin": "B6"
+    },
+    "rgblight": {
+        "led_count": 18,
+        "max_brightness": 150
+    }
+}
